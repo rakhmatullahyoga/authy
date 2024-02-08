@@ -112,7 +112,7 @@ func updateUserHandler(w http.ResponseWriter, r *http.Request) {
 	if params.UserID != "" || params.Password != "" {
 		writeResponse(w, Response{
 			Message: "Account creation failed",
-			Cause:   "note updateable user_id and password",
+			Cause:   "not updateable user_id and password",
 		}, http.StatusBadRequest)
 		return
 	}
